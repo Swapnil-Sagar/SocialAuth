@@ -38,6 +38,7 @@ class App extends Component {
             <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign Out!</button>
             <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
+            <img alt="profile pic" src={firebase.auth().currentUser.photoURL} />
           </span>
         ) : (
           <StyledFirebaseAuth
